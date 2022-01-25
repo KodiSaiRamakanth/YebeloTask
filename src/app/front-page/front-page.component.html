@@ -1,0 +1,50 @@
+
+<div class="sidebar"  >
+    <h1>Category</h1>
+    <a class="active" href="#home">All</a>
+    <div *ngFor="let product of productList">
+
+            <a *ngIf="product.p_category == product.p_category">{{product.p_category}}</a>
+
+    </div>
+   
+  </div>    
+
+
+
+  <div class="content">
+<div class="row ">
+    <div class="col-md-2">
+     <h1>Products</h1>
+    </div>
+   
+    
+  
+    <!-- <div class="col">
+        <h1>Products</h1>
+
+    </div> -->
+  </div>
+
+
+
+
+
+
+  <div class="mt-5">
+
+    <div class="col-md-9 mt-5">
+        <div class="row ">
+            <div class="col-md-3" *ngFor="let product of productList">
+                <!-- <h1>{{product.p_name}}</h1> -->
+                <app-product-list  [data]="product"></app-product-list>
+                <!-- <app-product-list [data]="product"></app-product-list> -->
+              <!-- <app-product-item [productItem]="product" [addedToWishlist]="wishlist.indexOf(product.id) >= 0"></app-product-item> -->
+            </div>
+          </div>
+      
+    </div>
+
+
+  </div>
+  </div>
